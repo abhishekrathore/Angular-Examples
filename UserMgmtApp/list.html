@@ -1,0 +1,50 @@
+
+<div ng-controller="listCtrl" class="row">
+
+    <div class="col-xs-8 col-xs-offset-2">
+
+        <h1>List of Users</h1>
+
+        <div>
+            <input type="text" ng-model="search">
+            Name<input type="checkbox" ng-model="name">
+            Age<input type="checkbox"  ng-model="age">
+            Email<input type="checkbox"  ng-model="email">
+            Phone<input type="checkbox"  ng-model="phone">
+            All<input type="checkbox" ng-model="all" >
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div ng-repeat="u in users|filter:search:custom" class="list-group col-xs-12">
+                <span class="col-xs-2 list-group-item">
+                    {{u.name}}
+                </span>
+                 <span class="col-xs-2 list-group-item">
+                    {{u.age}}
+                </span>
+                 <span class="col-xs-3 list-group-item">
+                    {{u.email}}
+                </span>
+                 <span class="col-xs-3 list-group-item">
+                    {{u.phone}}
+                </span>
+                <span class="col-xs-2">
+                    <a class="btn btn-warning" href="#/modify/{{$index}}">Edit</a>
+
+                </span>
+
+            </div>
+        </div>
+        <a class="btn btn-info" href="#/add">Go to Add</a>
+
+
+   </div>
+
+
+</div>
+
+

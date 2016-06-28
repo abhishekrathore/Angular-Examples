@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Firebase - New Migration</title>
+    <script src="angular.js"></script>
+    <script src="firebase.js"></script>
+    <script src="angularfire.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBtuYxTDmzgijQsPDFAs_sg1dXn0hqewKU",
+            authDomain: "fir-app-3d47b.firebaseapp.com",
+            databaseURL: "https://fir-app-3d47b.firebaseio.com",
+            storageBucket: "",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="test">
+
+<div ng-controller="testCtrl">
+
+    <input type="text" ng-model="user.name">
+    <button ng-click="add()">Add User</button>
+
+
+    <p ng-repeat="n in names">
+        {{n.name}}
+    </p>
+
+
+
+
+</div>
+
+
+</body>
+</html>
