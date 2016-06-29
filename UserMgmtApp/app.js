@@ -9,6 +9,7 @@ app.config(function($routeProvider){
         .when("/add",{"templateUrl":"add.html"})
         .when("/list",{"templateUrl":"list.html"})
         .when("/modify/:id",{"templateUrl":"modify.html"})
+        .otherwise("/list")
 
 })
 
